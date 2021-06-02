@@ -1,0 +1,14 @@
+// Colors
+
+// Layout
+$padding: 2rem;
+$page-max-width: 138rem;
+$form-max-width: 100rem;
+
+// Grid
+$grid-columns: 12 !default; // Number of columns in the grid system
+$grid-columns-tab: 8 !default; // Number of columns in the grid system for tablets
+$grid-columns-mob: 4 !default; // Number of columns in the grid system for mobile phones
+$grid-max-width: 1440px;
+$grid-gap: #{$padding} !default;
+$grid-margin: #{$padding} !default;
