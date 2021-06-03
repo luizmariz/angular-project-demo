@@ -13,9 +13,7 @@ const routes: Routes = [
       {
         path: 'demo',
         loadChildren: () =>
-          import('./modules/demo/demo-routing.module').then(
-            (m) => m.DemoRoutingModule
-          ),
+          import('./modules/demo/demo.module').then((m) => m.DemoModule),
       },
     ],
   },
