@@ -1,1 +1,29 @@
-<p>searchbar works!</p>
+<div
+  [ngClass]="{
+    'c-searchbar': true,
+    'l-flex': true,
+    'c-searchbar--with-panel': suggestions?.length
+  }"
+>
+  <input
+    type="search"
+    placeholder="BUSQUE POR 'GOLDEN TULIP' OU ALGO DO TIPO"
+    class="c-searchbar__search-input"
+    [formControl]="_inputValue"
+    (keypress)="$event.code === 'Enter' ? handleSearch() : null"
+  />
+  <button class="c-searchbar__search-btn" (click)="handleSearch()">
+    <img src="assets/svgs/magnifier.svg" class="c-searchbar__search-btn-icon" />
+  </button>
+  <ul class="c-searchbar__suggestions-panel" *ngIf="suggestions?.length">
+    <li
+      class="c-searchbar__suggestion"
+      *ngFor="let suggestion of suggestions; index as i"
+      tabindex="0"
+      (click)="handleSuggestionSelect(i)"
+      (keypress)="$event.code === 'Enter' ? handleSuggestionSelect(i) : null"
+    >
+      {{ suggestion?.suggestion }}
+    </li>
+  </ul>
+</div>
