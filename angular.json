@@ -99,8 +99,18 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/assets",
+              "src/browserconfig.xml",
+              "src/manifest.json",
+              "src/robots.txt",
+              {
+                "glob": "**/*",
+                "input": "./resources/assets",
+                "output": "./assets"
+              }
+            ],
+            "styles": ["resources/scss/global.scss"],
             "scripts": []
           }
         }

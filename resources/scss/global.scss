@@ -12,21 +12,36 @@ html {
   --primary: #243fdb;
   --secondary: #4681e1;
   --tertiary: #fcdb67;
-  --text: #53585e;
+  --text: #696968;
 
   --padding: #{$padding};
 
   body {
     margin: 0;
     font-size: 1.4rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     color: var(--text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    background: #fbfafb;
   }
 
   &,
   * {
     box-sizing: border-box;
+  }
+
+  img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
   }
 }
