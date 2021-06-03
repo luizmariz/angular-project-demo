@@ -8,10 +8,19 @@
 html {
   font-size: 62.5%;
 
+  // Colors
+  --primary: #243fdb;
+  --secondary: #4681e1;
+  --tertiary: #fcdb67;
+  --text: #53585e;
+
+  --padding: #{$padding};
+
   body {
     margin: 0;
     font-size: 1.4rem;
     font-family: 'Lato', sans-serif;
+    color: var(--text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
