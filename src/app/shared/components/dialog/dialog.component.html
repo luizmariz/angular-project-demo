@@ -1,0 +1,11 @@
+<div *ngIf="!isHidden" class="l-dialog-wrapper l-flex--middle--center">
+  <div class="c-dialog">
+    <p class="c-dialog__message">
+      Tem certeza que deseja ir para a outra tela?
+    </p>
+    <div class="l-flex--middle--center c-dialog__actions">
+      <demo-button text (buttonClicked)="actionClicked.emit()">NÃO</demo-button>
+      <demo-button text (buttonClicked)="actionClicked.emit()">SIM</demo-button>
+    </div>
+  </div>
+</div>

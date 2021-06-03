@@ -1,0 +1,6 @@
+<button
+  [ngClass]="{ 'c-btn': true, 'c-btn--text': text }"
+  (click)="buttonClicked.emit($event)"
+>
+  <ng-content></ng-content>
+</button>
