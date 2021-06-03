@@ -1,0 +1,14 @@
+{
+  "payload": [
+    {
+      "imgUrl": "https://www.epicworldtour.com/images/golden_tulip_logo_before_after.png",
+      "title": "Golden Tulip Inn",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisl augue, tincidunt sagittis risus non, vestibulum finibus diam. Pellentesque vitae urna libero."
+    },
+    {
+      "imgUrl": "https://www.epicworldtour.com/images/golden_tulip_logo_before_after.png",
+      "title": "Golden Tulip",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisl augue, tincidunt sagittis risus non, vestibulum finibus diam. Pellentesque vitae urna libero."
+    }
+  ]
+}
