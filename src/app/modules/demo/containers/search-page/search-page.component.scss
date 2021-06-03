@@ -10,5 +10,13 @@
       margin: calc(var(--padding) * 4) 0;
       height: 4rem;
     }
+
+    &__searchbar-wrapper {
+      z-index: 99;
+    }
+  }
+
+  .l-search-content {
+    padding: var(--padding) 0;
   }
 }

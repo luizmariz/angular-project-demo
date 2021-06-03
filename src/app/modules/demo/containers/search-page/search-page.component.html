@@ -1,11 +1,51 @@
 <section class="l-search-header">
-  <div class="l-grid">
-    <div class="l-grid__col-4 l-flex--center">
+  <div class="l-grid l-grid--tab l-grid--lg">
+    <div
+      class="l-grid__col-4 l-grid__col-8--tab l-grid__col-12--lg l-flex--center"
+    >
       <img class="l-search-header__logo" src="assets/images/logo.png" />
     </div>
-    <div>
-      <app-searchbar></app-searchbar>
+    <div
+      class="
+        l-grid__col-4
+        l-grid__col-8--tab
+        l-grid__col-start-4--lg
+        l-grid__col-end-9--lg
+        l-search-header__searchbar-wrapper
+      "
+    >
+      <demo-searchbar
+        [suggestions]="_suggestions"
+        (valueChanged)="handleSuggestionUpdate($event)"
+        (searchClicked)="handleSearch($event)"
+      ></demo-searchbar>
     </div>
   </div>
 </section>
 <img class="l-search-header-wave" src="assets/svgs/wave.svg" />
+<section class="l-search-content">
+  <div class="l-grid l-grid--tab l-grid--lg">
+    <div
+      class="
+        l-grid__col-4
+        l-grid__col-8--tab
+        l-grid__col-start-3--lg
+        l-grid__col-end-10--lg
+      "
+    >
+      <demo-result-panel [queryString]="_queryString">
+        <demo-result-panel-item
+          *ngFor="let item of _data"
+          [imgUrl]="item.imgUrl"
+          [title]="item.title"
+          [description]="item.description"
+          (showMoreClicked)="_showConfirmDialog = true"
+        ></demo-result-panel-item>
+      </demo-result-panel>
+    </div>
+  </div>
+</section>
+<demo-dialog
+  [isHidden]="!_showConfirmDialog"
+  (actionClicked)="_showConfirmDialog = false"
+></demo-dialog>
