@@ -1,0 +1,14 @@
+:host {
+  display: block;
+
+  .l-search-header {
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(to right, var(--secondary), var(--primary));
+
+    &__logo {
+      margin: calc(var(--padding) * 4) 0;
+      height: 4rem;
+    }
+  }
+}
