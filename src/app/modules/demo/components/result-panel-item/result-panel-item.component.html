@@ -1,0 +1,37 @@
+<li class="c-result-panel-item">
+  <div
+    [ngClass]="{
+      'c-result-panel-item__header': true,
+      'l-flex--between': true,
+      'c-result-panel-item__header--not-collapsed': !_isCollapsed
+    }"
+  >
+    <div class="l-flex--middle">
+      <img class="c-result-panel-item__header-logo" [src]="imgUrl" />
+      <p class="c-result-panel-item__header-title">{{ title }}</p>
+    </div>
+    <button
+      type="button"
+      class="c-result-panel-item__header-action-text l-flex--middle"
+      (click)="togglePanelItem()"
+    >
+      {{ _isCollapsed ? 'Ver detalhe da ação' : 'Ocultar detalhe da ação' }}
+      <span
+        [ngClass]="{
+          'c-result-panel-item__header-action-text-chevron': true,
+          'c-result-panel-item__header-action-text-chevron--bottom':
+            !_isCollapsed
+        }"
+      ></span>
+    </button>
+  </div>
+  <div
+    *ngIf="!_isCollapsed"
+    class="c-result-panel-item__content l-flex--between"
+  >
+    <p class="c-result-panel-item__content-description">
+      {{ description }}
+    </p>
+    <demo-button (buttonClicked)="showMoreClicked.emit()">VER MAIS</demo-button>
+  </div>
+</li>

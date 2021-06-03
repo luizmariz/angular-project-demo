@@ -1,0 +1,14 @@
+:host {
+  display: block;
+
+  .l-result-panel {
+    &__title {
+      display: block;
+      margin-bottom: var(--padding);
+
+      color: #949595;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+}
