@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-project-demo": {
+    "angular-project-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-project-demo",
+            "outputPath": "dist/angular-project-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -37,7 +37,7 @@
                 "output": "./assets"
               }
             ],
-            "styles": ["resources/scss/global.scss", "src/styles.scss"],
+            "styles": ["resources/scss/global.scss"],
             "scripts": []
           },
           "configurations": {
@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-project-demo:build:production"
+              "browserTarget": "angular-project-app:build:production"
             },
             "development": {
-              "browserTarget": "angular-project-demo:build:development"
+              "browserTarget": "angular-project-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-project-demo:build"
+            "browserTarget": "angular-project-app:build"
           }
         },
         "test": {
@@ -105,38 +105,7 @@
           }
         }
       }
-    },
-    "common": {
-      "projectType": "library",
-      "root": "projects/common",
-      "sourceRoot": "projects/common/src",
-      "prefix": "com",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/common/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/common/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/common/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/common/src/test.ts",
-            "tsConfig": "projects/common/tsconfig.spec.json",
-            "karmaConfig": "projects/common/karma.conf.js"
-          }
-        }
-      }
     }
   },
-  "defaultProject": "angular-project-demo"
+  "defaultProject": "angular-project-app"
 }
