@@ -1,27 +1,26 @@
-# Angular Demo
+# TOTVS — Angular Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
+Projeto criado com a [Angular CLI](https://github.com/angular/angular-cli) versão 12.0.2.
 
-## Development server
+O desafio consiste nas seguintes tarefas:
+    - Um filtro de busca que exibe o resultado no formato de card;
+    - Os cards são colapsibles que contém a opção de "ver mais detalhes";
+    - Caso o usuário clique no botão "ver mais detalhes", uma modal será aberta com as opções "Sim" e "Não";
+    - A modal não faz nada, tanto "Sim" quanto "Não" apenas fecham a mesma.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A implementação segue com fidelidade o mockup fornecido.
 
-## Code scaffolding
+## Deploy
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+É possível acessar a demo [aqui](https://luizipsum.com.br/angular-project-demo/#/demo/search). A versão estática mais estável ficará sempre disponibilizada nesse 
+link via [Github Pages](https://pages.github.com/) e [Github Actions](https://github.com/features/actions).
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ambiente de desenvolvimento
 
-## Running unit tests
+Para executar o projeto certifique-se de ter o Node versão 14.* ou superior instalado. Instale as dependências do projeto com `npm install` e execute-o com `npm start`. 
+Com o servidor local de pé, será possível então acessar o projeto em `http://localhost:4200`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Help
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para informações de como utilizar a CLI do Angular, basta checar as [docs](https://angular.io/cli).
