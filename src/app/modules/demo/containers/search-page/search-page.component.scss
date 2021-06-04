@@ -18,5 +18,19 @@
 
   .l-search-content {
     padding: var(--padding) 0;
+
+    &__search-img {
+      width: 18rem;
+      opacity: 0.1;
+    }
+
+    &__aux-text {
+      margin-top: var(--padding);
+      color: #c8c9c8;
+      font-size: 1.6rem;
+      font-weight: bold;
+      max-width: 17rem;
+      text-align: center;
+    }
   }
 }

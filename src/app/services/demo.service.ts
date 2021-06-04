@@ -20,7 +20,7 @@ export class DemoService {
   getSuggestions(q: string): Observable<SearchSuggestion[]> {
     return new Observable<SearchSuggestion[]>((observer) => {
       if (!q?.match(this.validStr)) {
-        observer.next([]);
+        observer.next(null);
         observer.complete();
       }
 
@@ -45,7 +45,7 @@ export class DemoService {
   getMatchs(q: string): Observable<SearchData[]> {
     return new Observable<SearchData[]>((observer) => {
       if (!q?.match(this.validStr)) {
-        observer.next([]);
+        observer.next(null);
         observer.complete();
       }
 

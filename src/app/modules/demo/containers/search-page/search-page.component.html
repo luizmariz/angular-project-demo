@@ -33,7 +33,7 @@
         l-grid__col-end-10--lg
       "
     >
-      <demo-result-panel [queryString]="_queryString">
+      <demo-result-panel *ngIf="_data" [queryString]="_queryString">
         <demo-result-panel-item
           *ngFor="let item of _data"
           [imgUrl]="item.imgUrl"
@@ -42,6 +42,15 @@
           (showMoreClicked)="handleToggleDialog($event)"
         ></demo-result-panel-item>
       </demo-result-panel>
+      <div class="l-flex--column--middle" *ngIf="!_data">
+        <img
+          class="l-search-content__search-img"
+          src="assets/images/search.png"
+        />
+        <p class="l-search-content__aux-text">
+          Você ainda não realizou nenhuma busca
+        </p>
+      </div>
     </div>
   </div>
 </section>

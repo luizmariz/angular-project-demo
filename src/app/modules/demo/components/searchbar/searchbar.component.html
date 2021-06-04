@@ -12,7 +12,11 @@
     [formControl]="_inputValue"
     (keypress)="$event.code === 'Enter' ? handleSearch() : null"
   />
-  <button class="c-searchbar__search-btn" (click)="handleSearch()">
+  <button
+    class="c-searchbar__search-btn"
+    (click)="handleSearch()"
+    [disabled]="this._inputValue.value === ''"
+  >
     <img src="assets/svgs/magnifier.svg" class="c-searchbar__search-btn-icon" />
   </button>
   <ul class="c-searchbar__suggestions-panel" *ngIf="suggestions?.length">
