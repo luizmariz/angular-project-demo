@@ -17,7 +17,10 @@
     (click)="handleSearch()"
     [disabled]="this._inputValue.value === ''"
   >
-    <img src="assets/svgs/magnifier.svg" class="c-searchbar__search-btn-icon" />
+    <img
+      src="./assets/svgs/magnifier.svg"
+      class="c-searchbar__search-btn-icon"
+    />
   </button>
   <ul class="c-searchbar__suggestions-panel" *ngIf="suggestions?.length">
     <li
