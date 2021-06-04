@@ -25,6 +25,7 @@
       &-title {
         font-weight: bold;
         font-size: 1.8rem;
+        margin: calc(var(--padding) / 2) calc(var(--padding) / 1.8);
       }
 
       &-action-text {
