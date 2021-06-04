@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'demo-button',
+  selector: 'shrd-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })

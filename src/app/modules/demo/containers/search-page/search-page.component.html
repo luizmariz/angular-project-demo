@@ -39,13 +39,14 @@
           [imgUrl]="item.imgUrl"
           [title]="item.title"
           [description]="item.description"
-          (showMoreClicked)="_showConfirmDialog = true"
+          (showMoreClicked)="handleToggleDialog($event)"
         ></demo-result-panel-item>
       </demo-result-panel>
     </div>
   </div>
 </section>
-<demo-dialog
+<shrd-dialog
   [isHidden]="!_showConfirmDialog"
-  (actionClicked)="_showConfirmDialog = false"
-></demo-dialog>
+  (actionClicked)="handleToggleDialog($event)"
+  (outsideClicked)="handleClickOutside()"
+></shrd-dialog>

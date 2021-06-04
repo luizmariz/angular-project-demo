@@ -1,11 +1,26 @@
-<div *ngIf="!isHidden" class="l-dialog-wrapper l-flex--middle--center">
-  <div class="c-dialog">
+<div
+  [ngClass]="{
+    'l-dialog-wrapper': true,
+    'l-flex--middle--center': true,
+    'l-dialog-wrapper--hidden': isHidden
+  }"
+>
+  <div
+    class="c-dialog"
+    *ngIf="!isHidden"
+    shrdClickOutside
+    (clickOutside)="handleOutsideClick()"
+  >
     <p class="c-dialog__message">
       Tem certeza que deseja ir para a outra tela?
     </p>
     <div class="l-flex--middle--center c-dialog__actions">
-      <demo-button text (buttonClicked)="actionClicked.emit()">NÃO</demo-button>
-      <demo-button text (buttonClicked)="actionClicked.emit()">SIM</demo-button>
+      <shrd-button text (buttonClicked)="actionClicked.emit($event)">
+        NÃO
+      </shrd-button>
+      <shrd-button text (buttonClicked)="actionClicked.emit($event)">
+        SIM
+      </shrd-button>
     </div>
   </div>
 </div>

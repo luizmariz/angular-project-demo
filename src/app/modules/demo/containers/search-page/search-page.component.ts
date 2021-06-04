@@ -48,4 +48,13 @@ export class SearchPageComponent implements OnInit, OnDestroy {
       })
     );
   }
+
+  handleToggleDialog(e): void {
+    e.preventDefault();
+    this._showConfirmDialog = !this._showConfirmDialog;
+  }
+
+  handleClickOutside(): void {
+    this._showConfirmDialog = false;
+  }
 }

@@ -32,6 +32,8 @@
     <p class="c-result-panel-item__content-description">
       {{ description }}
     </p>
-    <demo-button (buttonClicked)="showMoreClicked.emit()">VER MAIS</demo-button>
+    <shrd-button (buttonClicked)="showMoreClicked.emit($event)">
+      VER MAIS
+    </shrd-button>
   </div>
 </li>

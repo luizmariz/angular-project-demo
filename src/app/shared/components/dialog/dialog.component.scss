@@ -27,5 +27,9 @@
         padding: var(--padding);
       }
     }
+
+    &--hidden {
+      display: none;
+    }
   }
 }

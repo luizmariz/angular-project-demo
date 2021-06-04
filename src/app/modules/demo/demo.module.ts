@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { DemoRoutingModule } from './demo-routing.module';
-import { ButtonModule, DialogModule, ClickOutsideModule } from '../../shared';
+import { ButtonModule, DialogModule } from '../../shared';
 
 import { SearchPageComponent } from './containers/search-page/search-page.component';
 import { SearchbarComponent } from './components/searchbar/searchbar.component';
@@ -15,7 +15,6 @@ import { ResultPanelItemComponent } from './components/result-panel-item/result-
   declarations: [
     SearchPageComponent,
     SearchbarComponent,
-
     ResultPanelComponent,
     ResultPanelItemComponent,
   ],
@@ -25,7 +24,6 @@ import { ResultPanelItemComponent } from './components/result-panel-item/result-
     ReactiveFormsModule,
     ButtonModule,
     DialogModule,
-    ClickOutsideModule,
   ],
 })
 export class DemoModule {}
